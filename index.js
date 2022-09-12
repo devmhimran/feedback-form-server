@@ -30,8 +30,8 @@ async function run() {
 
     app.post('/feedback-form', (req, res) =>{
       const addData = req.body;
-      // const result = feedbackCollection.insertOne(addData)
-      console.log(addData)
+      const result = feedbackCollection.insertOne(addData)
+      res.send(result)
 
     })
     
