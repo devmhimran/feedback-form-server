@@ -21,7 +21,7 @@ async function run() {
     await client.connect();
     const feedbackCollection = client.db('Feedback-form').collection('form-data');
 
-    app.get('/form-data', async (req,res) =>{
+    app.get('/form-all-data', async (req,res) =>{
       const query = {};
       const cursor = feedbackCollection.find(query);
       const data = await cursor.toArray();
