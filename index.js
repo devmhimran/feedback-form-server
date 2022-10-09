@@ -18,7 +18,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 async function run() {
   try {
-    await client.connect();
+
     const feedbackCollection = client.db('Feedback-form').collection('form-data');
 
     app.get('/form-all-data', async (req,res) =>{
